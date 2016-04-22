@@ -1,0 +1,209 @@
+/*Site wide */
+/* Text Color */
+/* Media Queries */
+/* 0, 600px */
+/* 960-1200px */
+@font-face {
+  font-family: "Merriweather-Light";
+  src: url("fonts/Merriweather/Merriweather-Light.eot?") format("eot"), url("fonts/Merriweather/Merriweather-Light.woff2") format("woff2"), url("fonts/Merriweather/Merriweather-Light.woff") format("woff"), url("fonts/Merriweather/Merriweather-Light.ttf") format("truetype"), url("fonts/Merriweather/Merriweather-Light.svg#Merriweather-Light") format("svg"); }
+@font-face {
+  font-family: "Merriweather-LightItalic";
+  src: url("fonts/Merriweather/Merriweather-LightItalic.eot?") format("eot"), url("fonts/Merriweather/Merriweather-LightItalic.woff2") format("woff2"), url("fonts/Merriweather/Merriweather-LightItalic.woff") format("woff"), url("fonts/Merriweather/Merriweather-LightItalic.ttf") format("truetype"), url("fonts/Merriweather/Merriweather-LightItalic.svg#Merriweather-LightItalic") format("svg"); }
+@font-face {
+  font-family: "Merriweather-Regular";
+  src: url("fonts/Merriweather/Merriweather-Regular.eot?") format("eot"), url("fonts/Merriweather/Merriweather-Regular.woff2") format("woff2"), url("fonts/Merriweather/Merriweather-Regular.woff") format("woff"), url("fonts/Merriweather/Merriweather-Regular.ttf") format("truetype"), url("fonts/Merriweather/Merriweather-Regular.svg#Merriweather-Regular") format("svg"); }
+@font-face {
+  font-family: "Merriweather-Bold";
+  src: url("fonts/Merriweather/Merriweather-Bold.eot?") format("eot"), url("fonts/Merriweather/Merriweather-Bold.woff2") format("woff2"), url("fonts/Merriweather/Merriweather-Bold.woff") format("woff"), url("fonts/Merriweather/Merriweather-Bold.ttf") format("truetype"), url("fonts/Merriweather/Merriweather-Bold.svg#Merriweather-Bold") format("svg"); }
+@font-face {
+  font-family: "Merriweather-Italic";
+  src: url("fonts/Merriweather/Merriweather-Italic.eot?") format("eot"), url("fonts/Merriweather/Merriweather-Italic.woff2") format("woff2"), url("fonts/Merriweather/Merriweather-Italic.woff") format("woff"), url("fonts/Merriweather/Merriweather-Italic.ttf") format("truetype"), url("fonts/Merriweather/Merriweather-Italic.svg#Merriweather-Italic") format("svg"); }
+@font-face {
+  font-family: "Merriweather-BoldItalic";
+  src: url("fonts/Merriweather/Merriweather-BoldItalic.eot?") format("eot"), url("fonts/Merriweather/Merriweather-BoldItalic.woff2") format("woff2"), url("fonts/Merriweather/Merriweather-BoldItalic.woff") format("woff"), url("fonts/Merriweather/Merriweather-BoldItalic.ttf") format("truetype"), url("fonts/Merriweather/Merriweather-BoldItalic.svg#Merriweather-BoldItalic") format("svg"); }
+@font-face {
+  font-family: "Merriweather-Black";
+  src: url("fonts/Merriweather/Merriweather-Black.eot?") format("eot"), url("fonts/Merriweather/Merriweather-Black.woff2") format("woff2"), url("fonts/Merriweather/Merriweather-Black.woff") format("woff"), url("fonts/Merriweather/Merriweather-Black.ttf") format("truetype"), url("fonts/Merriweather/Merriweather-Black.svg#Merriweather-Black") format("svg"); }
+@font-face {
+  font-family: "Merriweather-BlackItalic";
+  src: url("fonts/Merriweather/Merriweather-BlackItalic.eot?") format("eot"), url("fonts/Merriweather/Merriweather-BlackItalic.woff2") format("woff2"), url("fonts/Merriweather/Merriweather-BlackItalic.woff") format("woff"), url("fonts/Merriweather/Merriweather-BlackItalic.ttf") format("truetype"), url("fonts/Merriweather/Merriweather-BlackItalic.svg#Merriweather-BlackItalic") format("svg"); }
+body {
+  margin: 0;
+  font-family: "Merriweather-Regular", serif; }
+
+nav {
+  background: #333;
+  height: 64px;
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  z-index: 999; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    @media only screen and (max-width: 599px) {
+      nav ul {
+        background: #444;
+        position: absolute;
+        top: 64px;
+        width: 100%; } }
+    @media only screen and (min-width: 600px) {
+      nav ul {
+        padding: 22px 8px;
+        float: right; } }
+    nav ul li {
+      padding: 16px 20px; }
+      @media only screen and (min-width: 600px) {
+        nav ul li {
+          padding: 16px 8px;
+          display: inline; } }
+
+footer {
+  font-family: "Merriweather-Light", serif;
+  padding: 12px;
+  text-align: center;
+  background: url("../img/navy_blue/navy_blue.png");
+  color: #fff; }
+
+.logo {
+  height: 48px;
+  padding: 8px 16px; }
+  @media only screen and (min-width: 600px) {
+    .logo {
+      padding-right: 0; } }
+
+.logo-container {
+  display: inline; }
+  @media only screen and (max-width: 599px) {
+    .logo-container {
+      width: 75px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0; } }
+
+.menu-icon {
+  height: 32px;
+  padding: 16px 16px;
+  cursor: pointer; }
+  @media only screen and (min-width: 600px) {
+    .menu-icon {
+      display: none; } }
+
+.hide-menu {
+  display: none; }
+  @media only screen and (min-width: 600px) {
+    .hide-menu {
+      display: inherit; } }
+
+.basic-link, nav ul li a {
+  font-family: "Merriweather-Regular", serif;
+  color: #fff;
+  text-decoration: none; }
+  .basic-link:hover, nav ul li a:hover {
+    font-weight: 800; }
+
+/* General styles for all menus */
+.cbp-spmenu {
+  background: #47a3da;
+  position: fixed; }
+  .cbp-spmenu h3 {
+    color: #afdefa;
+    font-size: 1.9em;
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    background: #0d77b6; }
+  .cbp-spmenu a {
+    display: block;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 300; }
+    .cbp-spmenu a:hover {
+      background: #258ecd; }
+    .cbp-spmenu a:active {
+      background: #afdefa;
+      color: #47a3da; }
+
+/* Orientation-dependent styles for the content of the menu */
+.cbp-spmenu-vertical {
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1000; }
+  .cbp-spmenu-vertical a {
+    border-bottom: 1px solid #258ecd;
+    padding: 1em; }
+
+/* Vertical menu closed */
+.cbp-spmenu-left {
+  left: -240px; }
+
+/* Vertical menu open */
+.cbp-spmenu-left.cbp-spmenu-open {
+  left: 0px; }
+
+/* Push classes applied to the body */
+.cbp-spmenu-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0; }
+
+.cbp-spmenu-push-toleft {
+  left: -240px; }
+
+/* Transitions */
+.cbp-spmenu, .cbp-spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+/* Example media queries */
+@media screen and (max-width: 55.1875em) {
+  .cbp-spmenu-horizontal {
+    font-size: 75%;
+    height: 110px; }
+
+  .cbp-spmenu-top {
+    top: -110px; }
+
+  .cbp-spmenu-bottom {
+    bottom: -110px; } }
+@media screen and (max-height: 26.375em) {
+  .cbp-spmenu-vertical {
+    font-size: 90%;
+    width: 190px; }
+
+  .cbp-spmenu-left, .cbp-spmenu-push-toleft {
+    left: -190px;
+    right: -190px; } }
+/* */
+.home-back {
+  background: url("../img//designer-desk.jpg");
+  -webkit-height: calc(100vh - 64px);
+  -moz-height: calc(100vh - 64px);
+  -ms-height: calc(100vh - 64px);
+  height: calc(100vh - 64px);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
+  .home-back h1, .home-back h4 {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff; }
+  .home-back h1 {
+    font-family: "Merriweather-Bold", serif;
+    font-size: 2.5rem;
+    margin-top: 0; }
+  .home-back h4 {
+    font-family: "Merriweather-BoldItalic", serif;
+    font-size: 1.5rem;
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=main.css.map */
