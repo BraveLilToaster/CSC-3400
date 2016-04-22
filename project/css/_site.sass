@@ -58,11 +58,27 @@ footer
   vertical-align: middle
 .fullwidth
   width: 100%
+.noM
+  margin: 0
+.noP
+  padding: 0
+.main-content
+  @media #{$medium-up}
+    margin: 0 auto
+    &.content-sm
+      max-width: 600px
+    &.content-med
+      max-width: 960px
+    &.content-lg
+      max-width: 1280px
 
 #main
   margin-top: $nav-height
 .main-container
-  padding: 8px 16px
+  padding: 32px 16px
+  &.moveup
+    @media #{$small-only}
+      margin-top: -80px
 .logo
   height: 48px
   padding: 8px 16px
@@ -79,8 +95,13 @@ footer
     left: 0
 .menu-icon
   height: 32px
-  padding: 16px 16px
+  padding: 8px
+  margin: 8px
   cursor: pointer
+  border-radius: 100%
+  @include prefix((transition: background 0.5s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
+  &:hover
+    background: #5d9fd8
   @media #{$medium-up}
     display: none
 .hide-menu
@@ -95,13 +116,26 @@ footer
     font-weight: 800
 .btn-secondary
   background: $color-A400
+  @include prefix((transition: background 0.3s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
   &:hover
     background: $color-A200
 .btn-green
   background: $color-green-700
+  @include prefix((transition: background 0.3s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
   &:hover
     background: $color-green-600
 .btn-red
   background: $color-red-700
+  @include prefix((transition: background 0.3s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
   &:hover
     background: $color-red-500
+
+
+.cover-photo
+  height: 15rem
+  @media #{$medium-up}
+    height: 25rem
+  &.cover-photo-bio
+    background: url("#{$img-path}mac-desk.jpg") no-repeat
+    background-position: center center
+    background-size: cover
