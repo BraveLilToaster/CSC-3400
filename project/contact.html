@@ -41,18 +41,20 @@
     </nav>
     <div id="main">
       <div class="main-container">
-      <form action="MAILTO:fm5432@wayne.edu" method="post" enctype="text/plain">
+      <form action="MAILTO:fm5432@wayne.edu" method="post" enctype="text/plain"
+            class="contact-form">
+        <h2>Contact</h2>
+        <p>Please feel free to get in touch with me by <a href="mailto:fm5432@wayne.edu">email</a> or fill out the form below.</p>
         <p>Name:</p>
         <input type="text" name="name" placeholder="Your Name">
         <p>E-mail:</p>
         <input type="text" name="mail" placeholder="Your Email">
         <p>Comment:</p>
         <textarea type="text" name="comment"
-                  placeholder="Enter your message here...">
-        </textarea>
+                  placeholder="Enter your message here..."></textarea>
         <br>
-        <input type="submit" value="Send">
-        <input type="reset" value="Reset">
+        <input type="submit" value="Send" class="input-button btn-green">
+        <input type="reset" value="Reset" class="input-button btn-red">
       </form>
       </div>
       <footer>
