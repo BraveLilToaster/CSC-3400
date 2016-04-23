@@ -1,12 +1,30 @@
 .project-section
   box-shadow: $shadow2
   margin-bottom: 2rem
+  position: relative
+  &:after
+    position: absolute
+    content: ""
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $dark-secondary
+    opacity: 0
+    @include prefix((transition: opacity 0.3s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
+  &:hover:after
+    opacity: .25
   img
     width: 100%
   h3
+    color: $light-text
+    text-decoration: none
+    font-weight: 300
     padding: 0px 8px
     margin: 8px 0px
-    font-weight: 300
   p
+    color: $light-text
+    text-decoration: none
     padding: 0px 8px 16px 8px
     margin-top: 0
+
