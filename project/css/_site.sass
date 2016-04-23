@@ -1,6 +1,7 @@
 body
   margin: 0
   font-family: '#{$font-name2}-regular', serif
+  color: $light-text
 nav
   background: $color-500
   height: $nav-height
@@ -18,10 +19,11 @@ nav
     overflow: hidden
     @include prefix((transition: max-height 0.8s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
     @media #{$small-only}
-      background: $color-500
+      background: $color-A400
       position: absolute
       top: 64px
       width: 100%
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 4px 10px 0 rgba(0, 0, 0, 0.12)
     @media #{$medium-up}
       padding: 20px 8px
       float: right
@@ -35,7 +37,7 @@ nav
         height: 100%
         display: block
         &:hover
-          background: $color-300
+          background: $color-A200
           font-weight: 300
 
         @media #{$medium-up}
@@ -58,10 +60,34 @@ footer
   vertical-align: middle
 .fullwidth
   width: 100%
+.text-left
+  text-align: left
+.text-right
+  text-align: right
+.text-center
+  text-align: center
 .noM
   margin: 0
+.noM-top
+  margin-top: 0
 .noP
   padding: 0
+
+.grid-3
+  @media #{$medium-up}
+    width: 48.1%
+    display: inline-block
+    &:nth-of-type(2n+2)
+      margin-left: 1rem
+  @media #{$large-up}
+    width: 31.8%
+    &:nth-of-type(2n+2)
+      margin-left: inherit
+    &:nth-of-type(3n+2)
+      margin-left: 1rem
+    &:nth-of-type(3n+3)
+      margin-left: 1rem
+
 .main-content
   @media #{$medium-up}
     margin: 0 auto
@@ -101,7 +127,7 @@ footer
   border-radius: 100%
   @include prefix((transition: background 0.5s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
   &:hover
-    background: #5d9fd8
+    background: $color-A200
   @media #{$medium-up}
     display: none
 .hide-menu
@@ -112,30 +138,51 @@ footer
 .basic-link
   color: #fff
   text-decoration: none
-  &:hover
-    font-weight: 800
+.primary-link
+  color: $color-500
+  text-decoration: none
+  font-weight: 800
 .btn-secondary
   background: $color-A400
   @include prefix((transition: background 0.3s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
   &:hover
     background: $color-A200
 .btn-green
-  background: $color-green-700
+  background: $color-green-500
   @include prefix((transition: background 0.3s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
   &:hover
-    background: $color-green-600
+    background: $color-green-300
 .btn-red
-  background: $color-red-700
+  background: $color-red-500
   @include prefix((transition: background 0.3s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
   &:hover
-    background: $color-red-500
-
+    background: $color-red-300
 
 .cover-photo
   height: 15rem
   @media #{$medium-up}
     height: 25rem
   &.cover-photo-bio
+    background: url("#{$img-path}martin-room.jpg") no-repeat
+    background-position: center center
+    background-size: cover
+  &.cover-photo-qualifications
     background: url("#{$img-path}mac-desk.jpg") no-repeat
+    background-position: center center
+    background-size: cover
+  &.cover-photo-education
+    background: url("#{$img-path}open-books.jpg") no-repeat
+    background-position: center center
+    background-size: cover
+  &.cover-photo-projects
+    background: url("#{$img-path}building-corner.jpg") no-repeat
+    background-position: center center
+    background-size: cover
+  &.cover-photo-contact
+    background: url("#{$img-path}mac-plant.jpg") no-repeat
+    background-position: center center
+    background-size: cover
+  &.cover-photo-blog
+    background: url("#{$img-path}rock-beach.jpg") no-repeat
     background-position: center center
     background-size: cover

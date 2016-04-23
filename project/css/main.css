@@ -1,5 +1,7 @@
 /*Site wide */
+/* Colors */
 /* Text Color */
+/* Shadows */
 /* Media Queries */
 /* 0, 600px */
 /* 960-1200px */
@@ -32,7 +34,8 @@
   src: url("fonts/jaapokki/jaapokki-regular.eot?") format("eot"), url("fonts/jaapokki/jaapokki-regular.ttf") format("truetype"), url("fonts/jaapokki/jaapokki-regular.svg#jaapokki-regular") format("svg"); }
 body {
   margin: 0;
-  font-family: "jaapokki-regular", serif; }
+  font-family: "jaapokki-regular", serif;
+  color: rgba(0, 0, 0, 0.87); }
 
 nav {
   background: #3F51B5;
@@ -59,10 +62,11 @@ nav {
     transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
     @media only screen and (max-width: 599px) {
       nav ul {
-        background: #3F51B5;
+        background: #3D5AFE;
         position: absolute;
         top: 64px;
-        width: 100%; } }
+        width: 100%;
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 4px 10px 0 rgba(0, 0, 0, 0.12); } }
     @media only screen and (min-width: 600px) {
       nav ul {
         padding: 20px 8px;
@@ -76,7 +80,7 @@ nav {
       height: 100%;
       display: block; }
       nav ul li a:hover {
-        background: #7986CB;
+        background: #536DFE;
         font-weight: 300; }
       @media only screen and (min-width: 600px) {
         nav ul li a {
@@ -102,11 +106,39 @@ footer {
 .fullwidth {
   width: 100%; }
 
-.noM {
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.noM, .blog-title {
   margin: 0; }
+
+.noM-top, .blog-date {
+  margin-top: 0; }
 
 .noP {
   padding: 0; }
+
+@media only screen and (min-width: 600px) {
+  .grid-3 {
+    width: 48.1%;
+    display: inline-block; }
+    .grid-3:nth-of-type(2n+2) {
+      margin-left: 1rem; } }
+@media only screen and (min-width: 960px) {
+  .grid-3 {
+    width: 31.8%; }
+    .grid-3:nth-of-type(2n+2) {
+      margin-left: inherit; }
+    .grid-3:nth-of-type(3n+2) {
+      margin-left: 1rem; }
+    .grid-3:nth-of-type(3n+3) {
+      margin-left: 1rem; } }
 
 @media only screen and (min-width: 600px) {
   .main-content {
@@ -160,7 +192,7 @@ footer {
   -ms-transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
   .menu-icon:hover {
-    background: #5d9fd8; }
+    background: #536DFE; }
   @media only screen and (min-width: 600px) {
     .menu-icon {
       display: none; } }
@@ -175,11 +207,14 @@ footer {
 .basic-link, nav ul li a {
   color: #fff;
   text-decoration: none; }
-  .basic-link:hover, nav ul li a:hover {
-    font-weight: 800; }
+
+.primary-link {
+  color: #3F51B5;
+  text-decoration: none;
+  font-weight: 800; }
 
 .btn-secondary {
-  background: #F50057;
+  background: #3D5AFE;
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
   -ms-transition: background 0.3s;
@@ -189,10 +224,10 @@ footer {
   -ms-transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
   .btn-secondary:hover {
-    background: #FF4081; }
+    background: #536DFE; }
 
 .btn-green {
-  background: #388E3C;
+  background: #4CAF50;
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
   -ms-transition: background 0.3s;
@@ -202,10 +237,10 @@ footer {
   -ms-transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
   .btn-green:hover {
-    background: #43A047; }
+    background: #81C784; }
 
 .btn-red {
-  background: #D32F2F;
+  background: #F44336;
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
   -ms-transition: background 0.3s;
@@ -215,7 +250,7 @@ footer {
   -ms-transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
   transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
   .btn-red:hover {
-    background: #F44336; }
+    background: #E57373; }
 
 .cover-photo {
   height: 15rem; }
@@ -223,7 +258,27 @@ footer {
     .cover-photo {
       height: 25rem; } }
   .cover-photo.cover-photo-bio {
+    background: url("../img/martin-room.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover; }
+  .cover-photo.cover-photo-qualifications {
     background: url("../img/mac-desk.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover; }
+  .cover-photo.cover-photo-education {
+    background: url("../img/open-books.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover; }
+  .cover-photo.cover-photo-projects {
+    background: url("../img/building-corner.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover; }
+  .cover-photo.cover-photo-contact {
+    background: url("../img/mac-plant.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover; }
+  .cover-photo.cover-photo-blog {
+    background: url("../img/rock-beach.jpg") no-repeat;
     background-position: center center;
     background-size: cover; }
 
@@ -239,13 +294,18 @@ footer {
   background-position: center; }
   .home-back h1, .home-back h4 {
     color: #fff;
-    font-weight: 300; }
+    font-weight: 300;
+    margin: 0; }
   .home-back h1 {
-    font-size: 2.5rem;
-    margin-top: 0; }
+    font-size: 2.5rem; }
+    @media only screen and (min-width: 600px) {
+      .home-back h1 {
+        font-size: 4rem; } }
   .home-back h4 {
-    font-size: 1.5rem;
-    margin-bottom: 0; }
+    font-size: 1.5rem; }
+    @media only screen and (min-width: 600px) {
+      .home-back h4 {
+        font-size: 2rem; } }
 
 .bio-img {
   border-radius: 100%;
@@ -289,5 +349,33 @@ footer {
     @media only screen and (min-width: 600px) {
       .contact-form .input-button {
         width: 49.5%; } }
+
+.project-section {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 2rem; }
+  .project-section img {
+    width: 100%; }
+  .project-section h3 {
+    padding: 0px 8px;
+    margin: 8px 0px;
+    font-weight: 300; }
+  .project-section p {
+    padding: 0px 8px 16px 8px;
+    margin-top: 0; }
+
+.blog-date {
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 300; }
+
+.blog-text {
+  line-height: 2.5; }
+
+.blog-img {
+  margin: 16px auto;
+  display: inherit;
+  width: 80%; }
+  @media only screen and (max-width: 599px) {
+    .blog-img {
+      width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
