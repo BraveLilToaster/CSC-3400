@@ -383,6 +383,8 @@ a {
     transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
   .project-section:hover:after {
     opacity: 0.25; }
+  .project-section:active:after {
+    opacity: 0.5; }
   .project-section img {
     width: 100%; }
   .project-section h3 {
